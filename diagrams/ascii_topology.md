@@ -1,7 +1,6 @@
 # 🧭 Topologia ASCII – VPN + Firewall + Switches
-
-    ```
-    [ Internet ]
+```                                                                        
+   [ Internet ]
        |
  +-----------+
  |   pfSense |
@@ -13,4 +12,4 @@
                            |
                      [ Ubuntu VPN ]
                       (OpenVPN S2S)
-                      ```
+```
