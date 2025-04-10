@@ -1,7 +1,5 @@
 # 🧭 Topologia ASCII – VPN + Firewall + Switches
 
----
-
   [ Internet ]
        |
  +-----------+
@@ -14,3 +12,4 @@
                            |
                      [ Ubuntu VPN ]
                       (OpenVPN S2S)
+
