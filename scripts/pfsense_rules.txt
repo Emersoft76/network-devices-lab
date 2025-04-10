@@ -1,0 +1,18 @@
+# Regras simuladas de firewall pfSense – Projeto 2
+
+# 🌐 LAN → Internet (NAT)
+PASS  LAN net  *  *  *  *  *  Allow LAN to access Internet
+
+# 🔒 Bloqueio geral por padrão
+BLOCK  *  *  *  *  *  *  Block all unspecified traffic
+
+# 📡 VPN → LAN
+PASS  OpenVPN net  *  *  192.168.10.0/24  *  *  Allow VPN clients to access internal LAN
+
+# 🔁 Acesso à GUI do pfSense via LAN
+PASS  LAN net  *  *  192.168.1.1  443  *  Allow access to pfSense WebGUI (HTTPS)
+
+# 🔌 VLAN 10 → Servidor interno
+PASS  VLAN10  *  *  192.168.10.100  22  *  Allow SSH from VLAN10 to internal server
+
+# 🔁 Regras de NAT refletem essas permissões de saída
